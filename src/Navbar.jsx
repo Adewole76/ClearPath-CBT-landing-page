@@ -1,6 +1,6 @@
 const NavBar = () =>{
     return <nav className="nav-bar">
- <h2>Past<span>q</span></h2>
+ <h2 className="logo">Past<span>q</span></h2>
  <ul>
     <li>Home</li>
     <li>About</li>
@@ -9,8 +9,8 @@ const NavBar = () =>{
  </ul>
 
  <section>
-    <button>Sign in</button>
-    <button>Get Started</button>
+    <button className="sign-in-btn">Sign in</button>
+    <button className="get-started-btn">Get Started</button>
  </section>
     </nav>
 }
