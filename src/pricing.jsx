@@ -1,65 +1,64 @@
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 const PricingSection = () => {
-  return <main>
+  return <main className="pricing-container">
     <section>
         <header>
-            <p>PRICING</p>
-            <h1>Simple, transparent pricing</h1>
-            <p>No hidden fees. No per-exam charges. One plan that scales with you</p>
-        <section>
-            <button>Monthly</button>
-            <button>Annual <span>-20%</span></button>
-        </section>
+            <p className="badge">PRICING</p>
+            <h1 className="head-description">Simple, transparent pricing</h1>
+          <article>
+            <p className="hidden-fees">No hidden fees. No per-exam charges. One plan that scales with you</p>
+          </article>
         </header>
 
         <footer>
             <div>
-             <p>Educator</p>
+             <p className="user-class">Educator</p>
              <section>
-             <h3>$29</h3>
-             <p>/month</p>
-             <p>For Individual teachers and tutors running their own assessments</p>
+             <h3 className="price">$29</h3>
+             <p className="time-zone">/month</p>
+             <p className="user-examples">For Individual teachers and tutors running their own assessments</p>
              <ul>
-                <li>Up to 200 students</li>
-                <li>10 concurrent exam sessions</li>
-                <li>Adaptive question engine</li>
-                <li>Basic analytics dashboard</li>
-                <li>Email support</li>
+                <li><IoIosCheckmarkCircleOutline></IoIosCheckmarkCircleOutline> Up to 200 students</li>
+                <li><IoIosCheckmarkCircleOutline />10 concurrent exam sessions</li>
+                <li><IoIosCheckmarkCircleOutline />Adaptive question engine</li>
+                <li><IoIosCheckmarkCircleOutline />Basic analytics dashboard</li>
+                <li><IoIosCheckmarkCircleOutline />Email support</li>
              </ul>
-             <button>Start free trial</button>
+             <button className="trial-btn">Start free trial</button>
              </section>
             </div>
 
-            <div>
+            <div className="special-price">
            <p>Institution</p>
              <section>
-             <h3>$199</h3>
-             <p>/month</p>
-             <p>For schools, colleges and trainint centres with multiple educators</p>
+             <h3 className="price">$199</h3>
+             <p className="time-zone">/month</p>
+             <p className="user-examples">For schools, colleges and trainint centres with multiple educators</p>
              <ul>
-                <li>Unlimited students</li>
-                <li>Unlimited concurrent sessions</li>
-                <li>Full adaptive engine</li>
-                <li>Ai-assisted proctoring</li>
-                <li>Priority support</li>
+                <li><IoIosCheckmarkCircleOutline />Unlimited students</li>
+                <li><IoIosCheckmarkCircleOutline />Unlimited concurrent sessions</li>
+                <li><IoIosCheckmarkCircleOutline />Full adaptive engine</li>
+                <li><IoIosCheckmarkCircleOutline />Ai-assisted proctoring</li>
+                <li><IoIosCheckmarkCircleOutline />Priority support</li>
              </ul>
-             <button>Start free trial</button>
+             <button className="trial-btn">Start free trial</button>
              </section>
             </div>
 
 
             <div>
-          <p>Enterprise</p>
-          <h3>Custom</h3>
+          <p className="user-class">Enterprise</p>
+          <h3 className="price">Custom</h3>
              <section>
-             <p>For-large-scale deployments, government bodies, and certification boards</p>
+             <p className="user-examples">For-large-scale deployments, government bodies, and certification boards</p>
              <ul>
-                <li>Everything in institutions</li>
-                <li>White-label branding</li>
-                <li>Custom integrations & API access</li>
-                <li>Dedicated Infrastructure</li>
-                <li>Onboarding & training</li>
+                <li><IoIosCheckmarkCircleOutline />Everything in institutions</li>
+                <li><IoIosCheckmarkCircleOutline />White-label branding</li>
+                <li><IoIosCheckmarkCircleOutline />Custom integrations & API access</li>
+                <li><IoIosCheckmarkCircleOutline />Dedicated Infrastructure</li>
+                <li><IoIosCheckmarkCircleOutline />Onboarding & training</li>
              </ul>
-             <button>Contact sales</button>
+             <button className="trial-btn">Contact sales</button>
              </section>
             </div>
         </footer>

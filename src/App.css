@@ -178,6 +178,10 @@ margin-bottom: 0;
   
 }
 
+
+.Card h1{
+  font-family: "Playfair Display";
+}
 .Card-info{
   background-color: white;
   text-align: left;
@@ -203,4 +207,135 @@ margin-bottom: 0;
   object-fit: cover;
    border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
+}
+.card-description{
+  color:#1A0E08;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+}
+.feature-num,.feature-tag{
+  display: inline-block;
+}
+.feature-num{
+  color:#E05C45;
+  font-size: 3em;
+  font-family: "Playfair Display";
+  font-weight: 400;
+}
+.feature-tag{
+  color:#1A0E08;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+/*Pricing Section Styles*/
+.pricing-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing-container header{
+  text-align: center;
+  width: 100%;
+}
+
+header article{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-description{
+  font-family: "Playfair Display";
+  font-size: 3em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hidden-fees{
+  color: #1A0E08;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 350px;
+}
+.pricing-container footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2em;
+  padding: 0 2em;
+}
+
+.pricing-container footer .special-price{
+  background-color: #E05C45;
+  padding: 2em;
+  border-radius: 1em;
+  color: white;
+}
+.special-price .user-examples{
+  color: white;
+}
+.special-price .trial-btn{
+  background-color: white;
+  color: #E05C45;
+  border: 1px solid transparent;
+}
+.special-price ul li{
+  color: white;
+}
+.pricing-container footer div{
+  background-color: white;
+  padding: 2em;
+    border-radius: 1em; 
+}
+.pricing-container div ul{
+  list-style-type: none;
+  padding: 0;
+   font-family:"DM Sans";
+}
+
+.pricing-container div ul li{
+  margin-bottom: 1em;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  margin-left: 1em; 
+}
+
+.pricing-container .price, .time-zone{
+  display: inline-block;
+}
+
+.price{
+  font-family: "Playfair Display";
+  font-size: 2.5em;
+  margin: 0;
+}
+.user-class{
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  color: #2C1810;
+}
+.user-examples{
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 14px;
+  color: #2C1810;
+}
+.trial-btn{
+  background-color: #E05C45;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 1em;
+  margin-top: 1em;
+  font-family: "DM Sans";
+  font-weight: bold;
+  padding: 1em 1.5em;
+  width: 100%;
 }
