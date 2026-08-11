@@ -16,6 +16,9 @@ nav{
   right: 0;
   left: 0;
   padding: 1em 1em;
+  background-color:#EDE8DF;
+  z-index: 1000;
+  
 }
 nav ul{
   padding: none;
@@ -127,14 +130,21 @@ nav section button{
    font-family: "DM Sans";
 }
 
-.reviews{
+.reviews {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
   font-family: "DM Sans";
   color: #1A0E08;
   font-weight: 400;
   font-size: 14px;
 }
+
+.reviews section, p{
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
 
 /*Features Section styles*/
 .featuresSection{
@@ -161,8 +171,7 @@ margin-bottom: 0;
 .featuresSection .instruction{
   color:#1A0E08;
   font-family: "DM Sans";
-  max-width: 500px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
 }
 .inner-section .scroll-instruction{
@@ -177,6 +186,9 @@ margin-bottom: 0;
   grid-template-columns: 1fr 1fr;
   height: 500px;
   margin-bottom: 3em;
+  position: sticky;
+  top: 0;                /* Keeps it locked to the top of the viewport when scrolling */
+  left: 50%;             /* Moves the left edge of the element to the exact horizontal center */
   
 }
 
@@ -194,6 +206,8 @@ margin-bottom: 0;
 
 .cards-section{
   padding: 2em;
+  height: 400vh;
+  width: 100%;
 }
 .feature-image-container{
   width: 100%;
@@ -348,6 +362,7 @@ header article{
   margin-top: 4em;  
   box-sizing: border-box;
   padding: 0 2em;
+  margin-bottom: 4em;
 }
 
 .messaging-container{
@@ -404,15 +419,22 @@ form button{
   padding: 1em 1.5em;
   width: 100%;
 }
+.privacy-policy{
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-weight: 400;
+  color: #1A0E08;
+  margin-top: 1em;
+  text-align: center;
+}
+
 form label{
   font-family: "DM Sans";
   font-size: 12px;
   font-weight: 500;
   color: #1A0E08;
 }
-.label-for-message{
-  margin-top: 1.5em;
-}
+
 .name-email{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -436,5 +458,67 @@ form .organization-input{
   border: 1px solid #DDD6CC;
   padding: 1.5em 0 1.5em 1.5em;
   width: 100%;
+  margin-bottom: 1.5em;
   
+}
+
+/*Remarks Section Styles*/
+.remarks-main{
+  width: 100%;
+  background-color: #1A0E08;
+  padding: 3em;
+}
+.remarks-section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remarks-section h4{
+  color: white;
+}
+.remarks-section span{
+  color: #E05C45;
+}
+.remarks-section ul{
+  list-style-type: none;
+  padding: 0;
+   color:rgba(255,255,255,0.42);
+  font-family: "DM Sans";
+}
+
+.remarks-section ul li{
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 1.5em;
+}
+
+hr {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.last-remarks{
+  color: rgba(255,255,255,0.42);
+  font-family: "DM Sans";
+  max-width: 160px;
+  font-size: 12px;
+}
+
+.Copyright-media{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Copyright-media{
+  color: rgba(255,255,255,0.42);
+  font-family: "DM Sans";
+  font-size: 12px;
+}
+
+.Copyright-media ul{
+  list-style-type: none;
+}
+.Copyright-media ul li{
+  display: inline-block;
+  padding: 0 1em;
 }

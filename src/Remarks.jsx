@@ -1,10 +1,10 @@
 const currentYear = new Date().getFullYear();
 const RemarksSection =()=> {
-   return <main>
-    <section>
+   return <main className="remarks-main">
+    <section className="remarks-section">
         <section>
-            <h4>PastQ</h4>
-            <p>The assessment platform built for 
+            <h4>Past<span>Q</span></h4>
+            <p className="last-remarks">The assessment platform built for 
                 modern education.
             </p>
         </section>
@@ -16,7 +16,7 @@ const RemarksSection =()=> {
             <li>Security</li>
         </ul>
         <ul>
-            <li>Resources</li>
+            <li>RESOURCES</li>
             <li>Documentation</li>
             <li>API Reference</li>
             <li>Integrations</li>
@@ -31,7 +31,7 @@ const RemarksSection =()=> {
             <li>Partners</li>
         </ul>
         <ul>
-            <li>Legal</li>
+            <li>LEGAL</li>
             <li>Privacy Policy</li>
             <li>Terms of Service</li>
             <li>Cookie Policy</li>
@@ -39,6 +39,7 @@ const RemarksSection =()=> {
         </ul>
     </section>
 <hr></hr>
+<footer className="Copyright-media">
     <section>
         <p>&copy;{currentYear}PastQ Inc. All rights reserved</p>
     </section>
@@ -48,6 +49,7 @@ const RemarksSection =()=> {
         <li>Github</li>
         <li>LinkedIn</li>
     </ul>
+    </footer>
    </main>
 }
 export default RemarksSection

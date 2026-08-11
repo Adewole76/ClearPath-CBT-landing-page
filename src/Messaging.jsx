@@ -46,12 +46,13 @@ const MessagingSection = () => {
             ORGANIZATION
             <input className="organization-input" type="text" placeholder="University of Ibadan" />
           </label>
-          <label className="label-for-message" htmlFor="">
+
+          <label className="label-message" htmlFor="">
             MESSAGE
             <textarea type="text" />
           </label>
         <button type="button">Send message</button>
-        <p>By submitting you agree to our Privacy Policy</p>
+        <p className="privacy-policy">By submitting you agree to our Privacy Policy</p>
         </form>
 
     </section>
