@@ -1,12 +1,12 @@
 const MessagingSection = () => {
- return <main>
-    <section>
-        <section>
-            <p>GET IN TOUCH</p>
+ return <main className="messaging-section">
+    <section className="messaging-container">
+        <section className="messaging-header">
+            <p className="badge">GET IN TOUCH</p>
             <h2>Ready to transform your assessments?</h2>
-            <p>Whether you're a single educator or a national examination body-our team will help you deploy a solutioin tailored to your exact requirements</p>            
+            <p className="message">Whether you're a single educator or a national examination body-our team will help you deploy a solutioin tailored to your exact requirements</p>            
         
-        <section>
+        <section className="messaging-info">
             <div>
                 <img src="" alt="" />
                 <footer>
@@ -31,7 +31,7 @@ const MessagingSection = () => {
         </section>
         </section>
         <form action="">
-          <section>
+          <section className="name-email">
             <label htmlFor="">
                 FULL NAME
                 <input type="text" placeholder="Dr Sarah Micheal" />

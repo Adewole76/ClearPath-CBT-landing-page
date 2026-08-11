@@ -339,3 +339,51 @@ header article{
   padding: 1em 1.5em;
   width: 100%;
 }
+
+/*Messaging Section Styles*/
+.messaging-section{
+  width: 100%;
+  margin-top: 4em;  
+}
+
+.messaging-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.messaging-header .message{
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A0E08;
+
+}
+.messaging-info p{
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-weight: 400;
+  color: #1A0E08;
+  margin: 0;
+}
+.messaging-container h2{
+  font-family: "Playfair Display";
+  font-size: 3.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+form{
+  background-color: white;
+  padding : 2em;
+}
+.name-email{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+form input{
+  display: block;
+  border: 1px solid #DDD6CC;
+  padding: 2em 0 2em 2em;
+  width: 100%;
+}
