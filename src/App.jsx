@@ -9,10 +9,12 @@ import FeaturesSection from './FeaturesSection'
 import PricingSection from './pricing'
 import MessagingSection from './Messaging'
 import RemarksSection from './Remarks'
+import ParticleCanvas from './ParticleCanvas'
 
 function App() {
   return (
     <>
+    <ParticleCanvas/>
       <NavBar></NavBar>
       <FirstSection></FirstSection>
       <FeaturesSection></FeaturesSection>
