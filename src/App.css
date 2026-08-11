@@ -1,4 +1,6 @@
-
+*{
+  box-sizing:border-box
+}
 body{
   background-color: #EDE8DF;
   position: relative;
@@ -344,6 +346,8 @@ header article{
 .messaging-section{
   width: 100%;
   margin-top: 4em;  
+  box-sizing: border-box;
+  padding: 0 2em;
 }
 
 .messaging-container{
@@ -373,17 +377,64 @@ header article{
 }
 form{
   background-color: white;
-  padding : 2em;
+  padding: 3em;
+  width: 100%;
+  border-radius: 1em;
+}
+form input{
+  border-radius: 1em;
+  border: 1px solid #DDD6CC;
+}
+form textarea{
+  border-radius: 1em;
+  border: 1px solid #DDD6CC;
+  width: 100%;
+  display: block;
+  resize: none;
+  height: 100px;
+}
+form button{
+  background-color: #E05C45;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 1em;
+  margin-top: 1em;
+  font-family: "DM Sans";
+  font-weight: bold;
+  padding: 1em 1.5em;
+  width: 100%;
+}
+form label{
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-weight: 500;
+  color: #1A0E08;
+}
+.label-for-message{
+  margin-top: 1.5em;
 }
 .name-email{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  column-gap: 1.5em;
+  margin-bottom: 1.5em;
 }
-
-form input{
+.name-email label{
+  width: 100%;
+}
+.name-email input{
+  display: block;
+  box-sizing: border-box;   /* essential for grid items to shrink correctly */
+   width: 100%;        /* never exceed the parent width */
+  box-sizing: border-box;
+  padding: 1.5em 0 1.5em 1.5em;
+}
+form .organization-input{
   display: block;
   border: 1px solid #DDD6CC;
-  padding: 2em 0 2em 2em;
+  padding: 1.5em 0 1.5em 1.5em;
   width: 100%;
+  
 }

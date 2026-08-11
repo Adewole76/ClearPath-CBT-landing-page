@@ -42,11 +42,11 @@ const MessagingSection = () => {
             </label>
           </section>
 
-          <label htmlFor="">
+          <label  htmlFor="">
             ORGANIZATION
-            <input type="text" placeholder="University of Ibadan" />
+            <input className="organization-input" type="text" placeholder="University of Ibadan" />
           </label>
-          <label htmlFor="">
+          <label className="label-for-message" htmlFor="">
             MESSAGE
             <textarea type="text" />
           </label>
