@@ -1,5 +1,33 @@
-const FeatureCard = ({title, header, description, Number, tag, imageSrc}) => {
-  return <div className="Card">
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+const FeatureCard = ({
+  index,
+  total,
+  scrollYProgress,
+  title,
+  header,
+  description,
+  Number,
+  tag,
+  imageSrc
+})  => {
+ const segment = 1 / total;
+  const start = index * segment;
+  const end = start + segment;
+  const nextEnd = Math.min(end + segment, 1);
+
+  // This card darkens while the NEXT card is entering (its own segment)
+  const isLast = index === total - 1;
+
+const overlayOpacity = useTransform(
+  scrollYProgress,
+  isLast ? [0, 1] : [end, nextEnd],
+  isLast ? [0, 0] : [0, 0.65]
+);
+  return <motion.div 
+      className="Card"
+      style={{ overlayOpacity}}   
+    >
     <section className="Card-info">
         <section>
             <p className="badge">{title}</p>
@@ -14,6 +42,18 @@ const FeatureCard = ({title, header, description, Number, tag, imageSrc}) => {
     <section className="feature-image-container">
     <img className="feature-image" src={imageSrc || null} alt="" />
     </section>
-  </div>
+    
+  <motion.div
+        className="card-overlay"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'black',
+          opacity: overlayOpacity,
+          borderRadius: '1em',
+          pointerEvents: 'none',
+        }}
+      />
+    </motion.div>
 }
 export default FeatureCard
