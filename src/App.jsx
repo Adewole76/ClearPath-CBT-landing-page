@@ -10,6 +10,8 @@ import PricingSection from './pricing'
 import MessagingSection from './Messaging'
 import RemarksSection from './Remarks'
 import ParticleCanvas from './ParticleCanvas'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import the styling
 
 function App() {
   return (

@@ -14,6 +14,17 @@ html {
   pointer-events: none;
   display: block;
 }
+.hidden{
+  display: none;
+}
+
+.hamburger-menu{
+  background-color: transparent;
+  border: none;
+}
+.hamburger-image{
+  width: 20px;
+}
 body{
   background-color: #EDE8DF;
   position: relative;
@@ -28,7 +39,7 @@ nav{
   top: 0;
   right: 0;
   left: 0;
-  padding: 1em 1em;
+  padding: 1em 3em 0 3em;
   background-color:#EDE8DF;
   z-index: 1000;
   
@@ -44,6 +55,13 @@ nav ul li{
   font-weight: 500;
   font-size: 14px;
   color: #2C1810;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+
+nav ul li:hover{
+  color:#E05C45;
 }
 .logo{
   font-family: "Playfair Display", serif;
@@ -61,6 +79,11 @@ nav section button{
   border: none;
   color: #2C1810;
   font-weight: 400;
+   transition: color 0.3s ease;
+}
+
+.sign-in-btn:hover{
+   color:#E05C45;
 }
 .get-started-btn{
   background-color: #E05C45;
@@ -68,6 +91,14 @@ nav section button{
   border-radius: 1em;
   color: white;
   font-weight: bold;
+  box-shadow: 0 4px 24px rgba(224,92,69,0.32);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get-started-btn:hover{
+  box-shadow: 0 8px 32px rgba(224,92,69,0.42);
+  background-color: #be4732f1;
+  transform: translateY(-3px);
 }
 
 /*first section styles*/
@@ -77,6 +108,7 @@ nav section button{
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100vh;
 }
 .headings{
  display: grid;
@@ -99,7 +131,7 @@ nav section button{
 }
 .Home-section h1{
   font-size: 4em;
-  width: 500px;
+  max-width: 500px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -133,6 +165,14 @@ nav section button{
   margin: 1em;
   font-family: "DM Sans";
   font-weight: bold;
+  box-shadow: 0 4px 24px rgba(224,92,69,0.32);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease
+}
+.start-btn:hover{
+  box-shadow: 0 8px 32px rgba(224,92,69,0.42);
+  background-color: #be4732f1;
+  transform: translateY(-3px);
+
 }
 .watch-btn{
    background-color: transparent;
@@ -141,6 +181,11 @@ nav section button{
    color: #1A0E08;
    font-weight: 550;
    font-family: "DM Sans";
+   transition: border-color 0.3s ease-in-out, color 0.3s ease;
+}
+.watch-btn:hover{
+  border-color:#E05C45;
+  color:#E05C45;
 }
 
 .reviews {
@@ -313,6 +358,14 @@ header article{
   background-color: white;
   color: #E05C45;
   border: 1px solid transparent;
+  box-shadow: 0 4px 24px rgba(224,92,69,0.32);
+}
+.trial-btn{
+  transition: box-shadow 0.3s ease-in, transform 0.3s ease-in
+}
+.trial-btn:hover{
+   box-shadow: 0 8px 32px rgba(224,92,69,0.42);
+   transform: translateY(-3px)
 }
 .special-price ul li{
   color: white;
@@ -431,6 +484,12 @@ form button{
   font-weight: bold;
   padding: 1em 1.5em;
   width: 100%;
+  box-shadow: 0 4px 24px rgba(224,92,69,0.32);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+form button:hover{
+  box-shadow: 0 8px 32px rgba(224,92,69,0.42);
+  transform: translateY(-3px);
 }
 .privacy-policy{
   font-family: "DM Sans";
@@ -493,6 +552,9 @@ form .organization-input{
 .remarks-section span{
   color: #E05C45;
 }
+.remarks-section ul .list-head:hover{
+  color: rgba(255,255,255,0.42);
+}
 .remarks-section ul{
   list-style-type: none;
   padding: 0;
@@ -505,6 +567,13 @@ form .organization-input{
   font-size: 12px;
   font-weight: 400;
   margin-top: 1.5em;
+  transition: color 0.3s ease;
+}
+
+
+.remarks-section ul li:hover{
+  color:#E05C45;
+  cursor: pointer;
 }
 
 hr {

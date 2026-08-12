@@ -10,13 +10,13 @@ const RemarksSection =()=> {
         </section>
 
         <ul>
-            <li>PRODUCT</li>
+            <li className="list-head">PRODUCT</li>
             <li>Features</li>
             <li>Pricing</li>
             <li>Security</li>
         </ul>
         <ul>
-            <li>RESOURCES</li>
+            <li className="list-head">RESOURCES</li>
             <li>Documentation</li>
             <li>API Reference</li>
             <li>Integrations</li>
@@ -24,14 +24,14 @@ const RemarksSection =()=> {
         </ul>
 
         <ul>
-            <li>COMPANY</li>
+            <li className="list-head">COMPANY</li>
             <li>About</li>
             <li>Careers</li>
             <li>Press</li>
             <li>Partners</li>
         </ul>
         <ul>
-            <li>LEGAL</li>
+            <li className="list-head">LEGAL</li>
             <li>Privacy Policy</li>
             <li>Terms of Service</li>
             <li>Cookie Policy</li>

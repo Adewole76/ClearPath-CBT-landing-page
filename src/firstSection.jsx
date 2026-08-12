@@ -28,7 +28,7 @@ const FirstSection = () =>{
  </div>   
     <section className="start-watch">
         <button className="start-btn">Start for free-no credit card</button>
-        <button className="watch-btn">Watch a 2-min demo&rarr;</button>
+        <button className="watch-btn">Watch a 2-min demo &rarr;</button>
     </section>
 
 <section className="reviews">

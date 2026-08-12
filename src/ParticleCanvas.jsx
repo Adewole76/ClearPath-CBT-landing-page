@@ -30,8 +30,8 @@ const ParticleCanvas = () => {
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
+        vx: (Math.random() - 0.5) * 0.6,
+        vy: (Math.random() - 0.5) * 0.6,
         r: Math.random() * 2 + 1.2,
         opacity: Math.random() * 0.5 + 0.25,
       }))
@@ -53,7 +53,7 @@ const ParticleCanvas = () => {
         const dist = Math.sqrt(dx * dx + dy * dy)
 
         if (dist < MOUSE_RADIUS) {
-          const force = ((MOUSE_RADIUS - dist) / MOUSE_RADIUS) * 0.012
+          const force = ((MOUSE_RADIUS - dist) / MOUSE_RADIUS) * 0.12
           p.vx += (dx / dist) * force
           p.vy += (dy / dist) * force
 
