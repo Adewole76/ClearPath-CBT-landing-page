@@ -17,6 +17,9 @@ html {
 .hidden{
   display: none;
 }
+.hamburger-menu{
+  display: none;
+}
 
 .hamburger-menu{
   background-color: transparent;
@@ -41,7 +44,7 @@ nav{
   left: 0;
   padding: 1em 3em 0 3em;
   background-color:#EDE8DF;
-  z-index: 1000;
+  z-index: 1300;
   
 }
 nav ul{
@@ -101,6 +104,29 @@ nav section button{
   transform: translateY(-3px);
 }
 
+@media (max-width: 658px) {
+  body{
+    margin-top: 6em;
+  }
+  nav ul, nav section{
+    display: none;
+  }
+  .hamburger-menu{
+    display: block;
+  }
+}
+
+/*SideBar styles*/
+.sidebar-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-top: 3em;
+  background-color:#EDE8DF;
+}
+
 /*first section styles*/
 .Home-section{
   width: 100%;
@@ -108,7 +134,6 @@ nav section button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
 }
 .headings{
  display: grid;
@@ -203,6 +228,19 @@ nav section button{
   flex-basis: 200px;
 }
 
+@media(max-width: 630px){
+  .headings h2{
+    font-size: 3em;
+  }
+  .reviews{
+   display: grid;
+   grid-template-columns: 1fr;
+  }
+
+  .reviews p{
+    margin: 0;
+  }
+}
 
 /*Features Section styles*/
 .featuresSection{
@@ -211,7 +249,7 @@ nav section button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 
 .featuresSection h1{
@@ -242,7 +280,7 @@ margin-bottom: 0;
 .Card{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 500px;
+  height: 400px;
   margin-bottom: 3em;
   position: sticky;
   top: 0;                /* Keeps it locked to the top of the viewport when scrolling */
@@ -266,6 +304,7 @@ margin-bottom: 0;
   padding: 2em;
   height: 400vh;
   width: 100%;
+  margin-bottom: 12em;
 }
 .feature-image-container{
   width: 100%;
@@ -305,6 +344,7 @@ margin-bottom: 0;
   margin-left: 0.5em;
 }
 
+
 /*Pricing Section Styles*/
 .pricing-container{
   width: 100%;
@@ -338,9 +378,8 @@ header article{
   max-width: 350px;
 }
 .pricing-container footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 2em;
   padding: 0 2em;
 }
@@ -421,6 +460,38 @@ header article{
   padding: 1em 1.5em;
   width: 100%;
 }
+@media (max-width: 1241px){
+  .pricing-container{
+    margin-top: 15em;
+    z-index: 1200;
+  }
+
+  .featuresSection{
+    margin-top: 18em;
+    z-index: 700;
+  }
+}
+
+@media (max-width: 1044px){
+  .pricing-container footer{
+   display: flex;
+  flex-wrap: wrap;       /* Allows items to move to the next row */
+  gap: 16px;  
+  padding: 0 1em;          /* Optional: Adds some padding around the container */
+  }
+
+  .pricing-container footer div{
+  flex: 0 0 calc(50% - 8px); 
+  box-sizing: border-box;
+  flex-grow: 1;   
+  }
+}
+@media (max-width:603px) {
+  .pricing-container footer div{
+    flex: 0 0 100%; 
+  }
+}
+
 
 /*Messaging Section Styles*/
 .messaging-section{
@@ -532,6 +603,27 @@ form .organization-input{
   width: 100%;
   margin-bottom: 1.5em;
   
+}
+
+@media(max-width: 596px){
+  .pricing-container{
+    margin-top: 20em;
+    z-index: 1200;
+  }
+}
+@media (max-width: 895px) {
+  .messaging-container{
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+}
+@media (max-width: 485px) {
+  form{
+    padding: 1.5em;
+  }
+  .name-email{
+    grid-template-columns: 1fr;
+  }
 }
 
 /*Remarks Section Styles*/

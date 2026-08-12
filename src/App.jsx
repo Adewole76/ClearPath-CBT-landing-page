@@ -12,12 +12,17 @@ import RemarksSection from './Remarks'
 import ParticleCanvas from './ParticleCanvas'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the styling
+import SideBar from './sideBar'
 
 function App() {
+ const [isActive, setIsActive] = useState(false);
+
+ const toggleActive = () => setIsActive(!isActive);
   return (
     <>
     <ParticleCanvas/>
       <NavBar></NavBar>
+      <SideBar></SideBar>
       <FirstSection></FirstSection>
       <FeaturesSection></FeaturesSection>
       <PricingSection></PricingSection>

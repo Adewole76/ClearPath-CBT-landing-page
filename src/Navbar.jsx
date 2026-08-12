@@ -13,7 +13,8 @@ const NavBar = () =>{
     <button className="get-started-btn">Get Started</button>
  </section>
 
- <button className="hamburger-menu hidden"><img className="hamburger-image" src="/hamburger.png" alt="" /></button>
+ <button className="hamburger-menu"><img className="hamburger-image" src="/hamburger.png" alt="" /></button>
+   
     </nav>
 }
 export default NavBar
