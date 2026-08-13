@@ -12,7 +12,7 @@ html {
 
 @media (max-width: 658px) {
   html {
-  scrollbar-width: 20px;          /* Options: auto, thin, none */
+  scrollbar-width: 40px;          /* Options: auto, thin, none */
   scrollbar-color: #E05C45 #EDE8DF; /* thumb color | track color */
 }
 }
