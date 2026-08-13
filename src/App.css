@@ -45,6 +45,7 @@ nav{
   padding: 1em 3em 0 3em;
   background-color:#EDE8DF;
   z-index: 1300;
+  box-shadow: 0 2px 8px rgba(44, 24, 16, 0.06), 0 8px 24px rgba(44, 24, 16, 0.08);
   
 }
 nav ul{

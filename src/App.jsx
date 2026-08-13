@@ -21,12 +21,17 @@ function App() {
  const [isActive, setIsActive] = useState(false);
 
  useEffect(() => {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-out-cubic',
-      once: true,
-    });
-  }, []);
+  AOS.init({
+    duration: 600,
+    easing: 'ease-out-cubic',
+    once: true,
+  });
+
+  const handleResize = () => AOS.refresh();
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
  const toggleActive = () => setIsActive(!isActive);
   return (
     <>

@@ -21,9 +21,9 @@ const NavBar = () => {
                 </button>
             </section>
 
-            <button className="hamburger-menu" data-aos="fade-down" data-aos-duration="500">
-                <img className="hamburger-image" src="/hamburger.png" alt="" />
-            </button>
+           <button className="hamburger-menu" data-aos="fade" data-aos-duration="400">
+    <img className="hamburger-image" src="/hamburger.png" alt="" />
+</button>
         </nav>
     );
 };
