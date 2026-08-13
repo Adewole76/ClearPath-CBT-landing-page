@@ -8,7 +8,7 @@ const RemarksSection =()=> {
                 modern education.
             </p>
         </section>
-
+<section className="remarks-lists">
         <ul>
             <li className="list-head">PRODUCT</li>
             <li>Features</li>
@@ -37,7 +37,8 @@ const RemarksSection =()=> {
             <li>Cookie Policy</li>
             <li>GDPR</li>
         </ul>
-    </section>
+      </section>
+     </section>
 <hr></hr>
 <footer className="Copyright-media">
     <section>

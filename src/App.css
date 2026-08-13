@@ -284,10 +284,45 @@ margin-bottom: 0;
   margin-bottom: 3em;
   position: sticky;
   top: 0;                /* Keeps it locked to the top of the viewport when scrolling */
-  left: 50%;             /* Moves the left edge of the element to the exact horizontal center */
-  
+  left: 50%;           /* Moves the left edge of the element to the exact horizontal center */
 }
 
+@media(max-width: 430px){
+  .Card{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 300px;
+  }
+  .feature-image{
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-top-right-radius: 0 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feature-num{
+  margin: 0;
+  font-size: 24px !important; 
+  font-weight: bold;
+}
+.feature-tag{
+  margin: 0;
+}
+.Card-info h1{
+  font-size: 2em;
+}
+.Card-info{
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 0 !important;
+  background-color: white;
+  text-align: left;
+  padding: 3em;
+
+}
+}
 
 .Card h1{
   font-family: "Playfair Display";
@@ -318,7 +353,7 @@ margin-bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-   border-top-right-radius: 1em;
+  border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
 }
 .card-description{
@@ -634,10 +669,56 @@ form .organization-input{
 }
 .remarks-section{
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 2em;
 }
-
+@media(max-width: 438px){
+  .messaging-section{
+    padding: 0 1em;
+  }
+  .messaging-header h2{
+    font-size: 2.5em;
+  }
+  .Copyright-media{
+    flex-wrap: wrap;
+  }
+  .Copyright-media ul{
+    padding: 0;
+    margin : 1em 0 0 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.head-description{
+  font-size: 2.5em;
+}
+.remarks-lists{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+.cards-section{
+  padding: 1em;
+}
+}
+@media(max-width: 615px){
+  .remarks-main{
+    padding: 1.5em;
+  }
+ 
+}
+ @media(max-width: 545px){
+    .remarks-section{
+      grid-template-columns: 1fr;
+    }
+  }
+ 
+.remarks-lists{
+  display: flex;
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+}
 .remarks-section h4{
   color: white;
 }
