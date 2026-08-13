@@ -114,6 +114,9 @@ nav section button{
   .hamburger-menu{
     display: block;
   }
+  nav{
+   padding: 1em;
+  }
 }
 
 /*SideBar styles*/
@@ -159,11 +162,27 @@ nav section button{
   max-width: 500px;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: 'Playfair Display', serif;
 }
 .Home-section h2{
  color: #E05C45;
  font-size: 4.5em;
  margin: 0;
+ font-family: "Playfair Display", serif;
+}
+@media(max-width: 658px){
+  .Home-section h1{
+    font-size: 3em;
+  }
+  .Home-section .headings h2{
+    font-size: 1.5em;
+  }
+  .featuresSection .inner-section h1{
+    font-size: 2.5em;
+  }
+  .featuresSection .inner-section h2{
+    font-size: 1.5em;
+  }
 }
 
 .start-watch button{

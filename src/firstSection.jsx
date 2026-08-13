@@ -9,13 +9,9 @@ const FirstSection = () =>{
       sequence={[
         'Built for Educators', 
         1000,         
-        '',            // Clear the entire line
-        500,   
         'Built for Students', 
-        2000,
-        '',            // Clear the entire line
-        500,  
-        'Built for Institution',
+        2000,  
+        'Built for Institutions',
         2000         
       ]}
       wrapper="h2"   // Element that wraps the text (default is span)
