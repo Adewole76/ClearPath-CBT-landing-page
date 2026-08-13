@@ -78,7 +78,7 @@ nav ul li:nth-child(3) { animation-delay: 0.2s; }
 nav ul li:nth-child(4) { animation-delay: 0.25s; }
 nav section .sign-in-btn { animation-delay: 0.3s; }
 nav section .get-started-btn { animation-delay: 0.35s; }
-nav .hamburger-menu { animation-delay: 0.1s; }
+nav .hamburger-image { animation-delay: 0.1s; }
 nav ul{
   padding: none;
   margin: 0;
