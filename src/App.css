@@ -4,6 +4,20 @@
 html {
   scroll-behavior: smooth;
 }
+
+html {
+  scrollbar-width: thin;          /* Options: auto, thin, none */
+  scrollbar-color: #E05C45 #EDE8DF; /* thumb color | track color */
+}
+
+@media (max-width: 658px) {
+  html {
+  scrollbar-width: 20px;          /* Options: auto, thin, none */
+  scrollbar-color: #E05C45 #EDE8DF; /* thumb color | track color */
+}
+}
+
+
 .particle-canvas {
   position: fixed;
   top: 0;
@@ -48,17 +62,6 @@ nav{
   box-shadow: 0 2px 8px rgba(44, 24, 16, 0.06), 0 8px 24px rgba(44, 24, 16, 0.08);
   
 }
-@keyframes navDropIn {
-  from {
-    opacity: 0;
-    transform: translateY(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 nav ul{
   padding: none;
