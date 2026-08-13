@@ -1,3 +1,4 @@
+// FeaturesSection.jsx
 import FeatureCard from "./FeatureCard"
 import firstPic from "./assets/First1.jpg"
 import SecondPic from "./assets/Second.jpg"
@@ -5,11 +6,9 @@ import ThirdPic from "./assets/Third.jpg"
 import FourthPic from "./assets/Fourth.jpg"
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react"
-const FeaturesSection = () => {
 
+const FeaturesSection = () => {
   const ref = useRef(null);
-  
-  // Track scroll progress of this specific element
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"]
@@ -50,19 +49,28 @@ const FeaturesSection = () => {
     },
   ]
 
-  return <main className="featuresSection">
-    <section className="inner-section">
-    <section>
-        <p className="badge">PLATFORM CAPABILITIES</p>
-        <h1>Everything an assessment needs</h1>
-        <h2>Nothing it doesn't</h2>
-        <div className="scroll-instruction">
-        <p className="instruction">Scroll to explore the features that make Pastq the trusted choice for rigorous digital assessment</p>
-        </div>
-    </section>
+  return (
+    <main className="featuresSection">
+      <section className="inner-section">
+        <section>
+          <p className="badge" data-aos="zoom-in" data-aos-duration="500">
+            PLATFORM CAPABILITIES
+          </p>
+          <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="150">
+            Everything an assessment needs
+          </h1>
+          <h2 data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+            Nothing it doesn't
+          </h2>
+          <div className="scroll-instruction">
+            <p className="instruction" data-aos="fade-up" data-aos-duration="600" data-aos-delay="450">
+              Scroll to explore the features that make Pastq the trusted choice for rigorous digital assessment
+            </p>
+          </div>
+        </section>
 
-    <section ref={ref} className="cards-section">
-       {features.map((feature, index) => (
+        <section ref={ref} className="cards-section">
+          {features.map((feature, index) => (
             <FeatureCard
               key={index}
               index={index}
@@ -71,8 +79,9 @@ const FeaturesSection = () => {
               {...feature}
             />
           ))}
-    </section>
-    </section>
-  </main>
+        </section>
+      </section>
+    </main>
+  )
 }
 export default FeaturesSection

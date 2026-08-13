@@ -10,13 +10,23 @@ import PricingSection from './pricing'
 import MessagingSection from './Messaging'
 import RemarksSection from './Remarks'
 import ParticleCanvas from './ParticleCanvas'
-import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the styling
 import SideBar from './sideBar'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function App() {
  const [isActive, setIsActive] = useState(false);
 
+ useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: true,
+    });
+  }, []);
  const toggleActive = () => setIsActive(!isActive);
   return (
     <>

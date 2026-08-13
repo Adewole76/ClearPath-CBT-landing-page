@@ -302,10 +302,10 @@ margin-bottom: 0;
   height: 400px;
   margin-bottom: 3em;
   position: sticky;
-  top: 0;                /* Keeps it locked to the top of the viewport when scrolling */
-  left: 50%;           /* Moves the left edge of the element to the exact horizontal center */
+  top: 0;
+  left: 50%;
+  will-change: opacity, transform;
 }
-
 @media(max-width: 430px){
   .Card{
     display: grid;
@@ -574,6 +574,18 @@ header article{
   font-weight: 400;
   color: #1A0E08;
   margin: 0;
+}
+.messaging-info div{
+  display: flex;
+  margin-bottom: 1em;
+}
+.messaging-info header{
+  background-color: #e05c4500;
+  padding: 8px 10px;
+  border-radius: 50%;
+}
+.msg-image{
+  width: 20px;
 }
 .messaging-container h2{
   font-family: "Playfair Display";
