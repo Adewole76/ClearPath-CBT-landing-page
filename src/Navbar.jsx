@@ -1,4 +1,4 @@
-const NavBar = () => {
+const NavBar = ({toggle}) => {
     return (
         <nav className="nav-bar">
             <h2 className="logo">
@@ -17,7 +17,7 @@ const NavBar = () => {
                 <button className="get-started-btn">Get Started</button>
             </section>
 
-            <button className="hamburger-menu">
+            <button onClick={toggle} className="hamburger-menu">
                 <img className="hamburger-image" src="/hamburger.png" alt="" />
             </button>
         </nav>

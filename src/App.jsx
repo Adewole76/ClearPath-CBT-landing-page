@@ -18,7 +18,8 @@ import 'aos/dist/aos.css';
 
 
 function App() {
- const [isActive, setIsActive] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+
 
  useEffect(() => {
   AOS.init({
@@ -36,8 +37,8 @@ function App() {
   return (
     <>
     <ParticleCanvas/>
-      <NavBar></NavBar>
-      <SideBar></SideBar>
+      <NavBar toggle={() => setIsOpen(!isOpen)}></NavBar>
+      <SideBar active={isOpen} ></SideBar>
       <FirstSection></FirstSection>
       <FeaturesSection></FeaturesSection>
       <PricingSection></PricingSection>

@@ -39,9 +39,11 @@ html {
   background-color: transparent;
   border: none;
 }
+
 .hamburger-image{
   width: 20px;
 }
+
 body{
   background-color: #EDE8DF;
   position: relative;
@@ -142,10 +144,16 @@ nav section button{
   left: 0;
   right: 0;
   z-index: 100;
-  padding-top: 3em;
+  padding-top: 4em;
+  padding-left: 1em;
   background-color:#EDE8DF;
 }
 
+.sidebar-container ul{
+  list-style-type: none;
+  font-family: 'DM Sans';
+  padding: 0;
+}
 /*first section styles*/
 .Home-section{
   width: 100%;
@@ -160,7 +168,7 @@ nav section button{
   text-align: center;
 }
 .badge-container{
-  background-color: #EDE8DF;
+  background-color: transparent;
 }
 .badge{
   color: #E05C45;
