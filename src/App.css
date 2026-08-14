@@ -84,6 +84,13 @@ nav ul li{
 nav ul li:hover{
   color:#E05C45;
 }
+.get-btn{
+  background-color:#E05C45;
+  color: white;
+  border: 1px solid transparent;
+  padding: 1em;
+  border-radius: 1em;
+}
 .logo{
   font-family: "Playfair Display", serif;
   margin: 0;
@@ -153,6 +160,9 @@ nav section button{
   list-style-type: none;
   font-family: 'DM Sans';
   padding: 0;
+}
+.sidebar-container ul li{
+  padding-bottom: 5px;
 }
 /*first section styles*/
 .Home-section{
