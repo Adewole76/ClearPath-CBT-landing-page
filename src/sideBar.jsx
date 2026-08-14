@@ -1,5 +1,5 @@
 const SideBar = ({active}) =>{
-   return <div className={active?"sidebar-container":"sidebar-container hidden"}>
+   return <div className={active?"sidebar-container active":"sidebar-container"}>
      <ul>
         <li>Home</li>
         <li>About</li>

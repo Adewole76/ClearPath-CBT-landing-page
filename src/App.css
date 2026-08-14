@@ -17,7 +17,9 @@ html {
 }
 }
 
-
+.sidebar-container.active{
+  transform: translateY(0);
+}
 .particle-canvas {
   position: fixed;
   top: 0;
@@ -28,9 +30,7 @@ html {
   pointer-events: none;
   display: block;
 }
-.hidden{
-  display: none;
-}
+
 .hamburger-menu{
   display: none;
 }
@@ -154,6 +154,9 @@ nav section button{
   padding-top: 4em;
   padding-left: 1em;
   background-color:#EDE8DF;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out; 
+  will-change: transform;
 }
 
 .sidebar-container ul{
@@ -161,6 +164,7 @@ nav section button{
   font-family: 'DM Sans';
   padding: 0;
 }
+
 .sidebar-container ul li{
   padding-bottom: 5px;
 }
