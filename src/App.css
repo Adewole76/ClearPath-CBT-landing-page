@@ -15,6 +15,9 @@ html {
   scrollbar-width: 40px;          /* Options: auto, thin, none */
   scrollbar-color: #E05C45 #EDE8DF; /* thumb color | track color */
 }
+
+  .cards-section{ --stick-top: 72px; } /* measure your actual nav height and adjust */
+
 }
 
 .sidebar-container.active{
@@ -90,6 +93,7 @@ nav ul li:hover{
   border: 1px solid transparent;
   padding: 1em;
   border-radius: 1em;
+  width: 100%;
 }
 .logo{
   font-family: "Playfair Display", serif;
@@ -153,6 +157,7 @@ nav section button{
   z-index: 100;
   padding-top: 4em;
   padding-left: 1em;
+  padding-bottom: 1em;
   background-color:#EDE8DF;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out; 
@@ -335,51 +340,73 @@ margin-bottom: 0;
 }
 
 .Card{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--card-h);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 400px;
-  margin-bottom: 3em;
-  position: sticky;
-  top: 0;
-  left: 50%;
-  will-change: opacity, transform;
+  will-change: transform;
+  transition: transform 0.05s linear;
 }
-@media(max-width: 430px){
-  .Card{
-    display: grid;
-    grid-template-columns: 1fr;
-    height: 300px;
-  }
-  .feature-image{
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  border-top-right-radius: 0 !important;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.feature-num{
-  margin: 0;
-  font-size: 24px !important; 
-  font-weight: bold;
-}
-.feature-tag{
-  margin: 0;
-}
-.Card-info h1{
-  font-size: 2em;
-}
-.Card-info{
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  border-bottom-left-radius: 0 !important;
-  background-color: white;
-  text-align: left;
-  padding: 3em;
 
+.Card-shell{
+  visibility: hidden;
 }
+
+
+.Card-live{
+  visibility: visible;
 }
+
+@media(max-width: 900px){
+  .cards-section{ --card-h: 340px; }
+}
+
+@media(max-width: 430px){
+  .cards-section{ --card-h: 300px; }
+  .Card{
+    grid-template-columns: 1fr;
+  }
+  .feature-image-container{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 0 !important;
+    height: 100%;
+  }
+  .feature-num{
+    margin: 0;
+    font-size: 24px !important;
+    font-weight: bold;
+  }
+  .feature-tag{
+    margin: 0;
+  }
+  .Card-info h1{
+    font-size: 2em;
+  }
+  .Card-info{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0 !important;
+    padding: 2em;
+  }
+}
+
+@media(max-width: 375px){
+  .cards-section{ --card-h: 280px; }
+  .Card-info{ padding: 1.5em; }
+  .Card-info h1{ font-size: 1.6em; }
+}
+
+@media(max-width: 320px){
+  .cards-section{ --card-h: 260px; }
+  .Card-info{ padding: 1.2em; }
+  .Card-info h1{ font-size: 1.4em; }
+  .card-description{ font-size: 13px; }
+}
+
 
 .Card h1{
   font-family: "Playfair Display";
@@ -394,9 +421,25 @@ margin-bottom: 0;
 
 .cards-section{
   padding: 2em;
-  height: 400vh;
+  height: 400vh;              /* COUNT (4) × 100vh — adjust if you add/remove cards */
   width: 100%;
   margin-bottom: 12em;
+  position: relative;
+  --card-h: 400px;
+  --stick-top: 90px;         
+}
+
+.features-pin{
+  position: sticky;
+  top: var(--stick-top);
+  height: calc(100vh - var(--stick-top));
+  overflow: hidden;
+}
+
+.features-deck{
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .feature-image-container{
   width: 100%;
