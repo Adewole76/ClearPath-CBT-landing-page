@@ -2,8 +2,8 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 const PricingSection = () => {
   return (
-    <main className="pricing-container">
-      <section>
+    <main  className="pricing-container">
+      <section id="prices" aria-label="Prices">
         <header>
           <p className="badge" data-aos="zoom-in" data-aos-duration="500">
             PRICING

@@ -1,6 +1,6 @@
 const MessagingSection = () => {
   return (
-    <main className="messaging-section">
+    <main id="contactMe" className="messaging-section">
       <section className="messaging-container">
         <section className="messaging-header" data-aos="fade-right" data-aos-duration="700">
           <p className="badge" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">

@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const FirstSection = () => {
     return (
-        <main className="Home-section">
+        <main id="home" className="Home-section">
             <section>
                 <div className="badge-container" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
                     <p className="badge">&#9679; COMPUTER BASED-TESTING PLATFORM</p>

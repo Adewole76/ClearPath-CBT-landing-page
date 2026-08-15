@@ -107,7 +107,7 @@ const FeaturesSection = () => {
   const t = k >= COUNT - 1 ? 0 : scaled - k;
 
   return (
-    <main className="featuresSection">
+    <main id="Feats" className="featuresSection">
       <section className="inner-section">
         <section>
           <p className="badge" data-aos="zoom-in" data-aos-duration="500">
