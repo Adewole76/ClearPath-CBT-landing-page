@@ -1,4 +1,4 @@
-const NavBar = ({toggle}) => {
+const NavBar = ({toggle, active}) => {
     return (
         <nav className="nav-bar">
             <h2 className="logo">
@@ -12,14 +12,15 @@ const NavBar = ({toggle}) => {
                 <li><a href="#contactMe">Contact</a></li>
             </ul>
 
-            <section>
+            <section className="nav-btns">
                 <button className="sign-in-btn">Sign in</button>
                 <button className="get-started-btn">Get Started</button>
+             <button onClick={toggle} className="hamburger-menu">
+                <img className="hamburger-image" src= {!active? "/hamburger.png":"/close.png"} alt="" />
+            </button>
             </section>
 
-            <button onClick={toggle} className="hamburger-menu">
-                <img className="hamburger-image" src="/hamburger.png" alt="" />
-            </button>
+           
         </nav>
     );
 };

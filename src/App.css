@@ -34,18 +34,23 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
   display: block;
 }
 
-.hamburger-menu{
-  display: none;
-}
 
+.nav-btns{
+  position: relative
+}
 .hamburger-menu{
   background-color: transparent;
   border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  padding: 0;
 }
 
 .hamburger-image{
@@ -148,11 +153,11 @@ nav section button{
   body{
     margin-top: 6em;
   }
-  nav ul, nav section{
-    display: none;
+  nav .sign-in-btn, nav .get-started-btn, nav ul{
+     display: none;
   }
   .hamburger-menu{
-    display: block;
+    visibility: visible;
   }
   nav{
    padding: 1em;
@@ -493,7 +498,6 @@ margin-bottom: 0;
 
 /*Pricing Section Styles*/
 .pricing-container{
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

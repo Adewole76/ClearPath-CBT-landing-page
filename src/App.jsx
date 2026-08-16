@@ -37,7 +37,7 @@ const [isOpen, setIsOpen] = useState(false);
   return (
     <>
     <ParticleCanvas/>
-      <NavBar toggle={() => setIsOpen(!isOpen)}></NavBar>
+      <NavBar toggle={() => setIsOpen(!isOpen)}active={isOpen}></NavBar>
       <SideBar active={isOpen} ></SideBar>
       <FirstSection></FirstSection>
       <FeaturesSection></FeaturesSection>
