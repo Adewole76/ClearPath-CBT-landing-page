@@ -1,4 +1,33 @@
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 const MessagingSection = () => {
+const form = useRef();
+  const [status, setStatus] = useState(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    emailjs
+      .sendForm(
+         import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      )
+      .then(() => {
+        setStatus('success');
+        form.current.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        setStatus('error');
+      });
+  };
+
+
+
   return (
     <main id="contactMe" className="messaging-section">
       <section className="messaging-container">
@@ -44,30 +73,30 @@ const MessagingSection = () => {
           </section>
         </section>
 
-        <form action="" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
+        <form ref={form} onSubmit={sendEmail} action="" data-aos="fade-left" data-aos-duration="700" data-aos-delay="150">
           <section className="name-email">
             <label htmlFor="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
               FULL NAME
-              <input type="text" placeholder="Dr Sarah Micheal" />
+              <input type="text" name="user_name" placeholder="Dr Sarah Micheal" required/>
             </label>
             <label htmlFor="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450">
               EMAIL
-              <input type="email" placeholder="johndoe@gmail.com" />
+              <input type="email" name="user_email" placeholder="johndoe@gmail.com" required/>
             </label>
           </section>
 
           <label htmlFor="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
             ORGANIZATION
-            <input className="organization-input" type="text" placeholder="University of Ibadan" />
+            <input className="organization-input" type="text" placeholder="University of Ibadan" required/>
           </label>
 
           <label className="label-message" htmlFor="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="550">
             MESSAGE
-            <textarea type="text" />
+            <textarea type="text" name="message" required/>
           </label>
 
-          <button type="button" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="650">
-            Send message
+          <button type="Submit" disabled={status === 'sending'}  data-aos="zoom-in" data-aos-duration="500" data-aos-delay="650">
+             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
           <p className="privacy-policy">By submitting you agree to our Privacy Policy</p>
         </form>

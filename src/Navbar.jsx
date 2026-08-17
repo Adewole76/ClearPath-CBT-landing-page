@@ -16,7 +16,7 @@ const NavBar = ({toggle, active}) => {
                 <button className="sign-in-btn">Sign in</button>
                 <button className="get-started-btn">Get Started</button>
              <button onClick={toggle} className="hamburger-menu">
-                <img className="hamburger-image" src= {!active? "/hamburger.png":"/close.png"} alt="" />
+                <img onClick={toggle} className="hamburger-image" src= {!active? "/hamburger.png":"/close.png"} alt="" />
             </button>
             </section>
 
